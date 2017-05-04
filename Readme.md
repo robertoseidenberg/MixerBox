@@ -4,9 +4,19 @@ An iOS μ-framework featuring 2 HSB color picker views.
 
 ![ ](preview.gif)
 
-#####Usage
 
-See the included sample project for implementation details. MixerBox provides two UIView subclasses. Indicating the appropriate subclass in InterfaceBuilder should suffice to make the views work.
+
+#### Setup
+
+Cloning the project, dropping it into your workspace and linking to __MixerBox.framework__ should make all required classes available.
+
+```
+$ git clone https://github.com/robertoseidenberg/MixerBox
+```
+
+#### Usage
+
+See the included sample project for implementation details. MixerBox provides two UIView subclasses.  Assigning those in InterfaceBuilder should suffice to make the views work.
 ```
 // Displays all hues in a colorwheel manner and allows picking hue and saturation
 public final class HSBView: ColorPickerView {
@@ -18,7 +28,7 @@ public final class SBView: ColorPickerView {
 ...
 }
 ```
-Both return values via __delegate__:
+Both views (when updated by the user) return values via __delegate__:
 
  ```fdff
 public protocol ColorPickerViewDelegate {
@@ -36,7 +46,7 @@ public var hsb: HSB {
 
 
 
-##### Requirements
+#### Requirements
 
 * iOS 10
 
@@ -45,6 +55,6 @@ public var hsb: HSB {
 
 
 
-##### Notes
+#### Notes
 
-Since both views are using Metal in order to display their colors they __do not__ work on the simulator!
+Since MixerBox is using Metal it __does not__ work on the simulator! In fact it won't even compile for the simulator.
