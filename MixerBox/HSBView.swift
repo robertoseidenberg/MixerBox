@@ -1,5 +1,6 @@
 import UIKit
 
+// Displays all hues in a colorwheel manner and allows picking hue and saturation
 public final class HSBView: ColorPickerView {
   
   public override var hsb: HSB {

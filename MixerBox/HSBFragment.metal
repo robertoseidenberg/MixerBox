@@ -3,7 +3,6 @@
 using namespace metal;
 
 struct HSBUniforms {
-  
   uint width;
   uint height;
   float brightness;

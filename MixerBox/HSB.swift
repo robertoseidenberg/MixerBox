@@ -2,9 +2,9 @@ import simd
 
 public struct HSB {
 
-  public var hue: Float        // Range: ???
-  public var saturation: Float // Range: 0..1
-  public var brightness: Float // Range: 0..1
+  public var hue: Float        // Range: 0...1
+  public var saturation: Float // Range: 0...1
+  public var brightness: Float // Range: 0...1
   
   public init(hue: Float, saturation: Float, brightness: Float) {
     self.hue = hue

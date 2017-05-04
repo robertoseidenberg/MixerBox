@@ -1,3 +1,4 @@
+// Allows selection of saturation and lightness
 public final class SBView: ColorPickerView {
   
   var background: SBMetalView!
