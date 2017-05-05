@@ -1,8 +1,12 @@
+#if !(SIMULATOR)
 import Metal
+#endif
 
 extension MetalView {
 
   func redraw() {
+    
+    #if !(SIMULATOR)
     if isDrawing == false {
 
       isDrawing = true
@@ -34,5 +38,6 @@ extension MetalView {
         commandBuffer.commit()
       }
     }
+    #endif
   }
 }

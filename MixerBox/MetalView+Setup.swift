@@ -1,5 +1,8 @@
 import QuartzCore
+
+#if !(SIMULATOR)
 import Metal
+#endif
 
 extension MetalView {
 
@@ -10,16 +13,20 @@ extension MetalView {
   }
 
   private func setupDevice() {
-
+    #if !(SIMULATOR)
+      
     guard let device = MTLCreateSystemDefaultDevice() else { fatalError("Unexpected nil value") }
     self.device = device
     metalLayer.device = device
     metalLayer.pixelFormat = .bgra8Unorm
 
     commandQueue = device.makeCommandQueue()
+    #endif
   }
 
   private func setupPipeline(fragmentFunctionName: String) {
+    #if !(SIMULATOR)
+    
     guard let path = Bundle(for: MixerBox.MetalView).path(forResource: "default", ofType: "metallib") else {
       fatalError("Resource missing: MixerBox: default.metallib")
     }
@@ -40,10 +47,12 @@ extension MetalView {
     } catch {
       fatalError(error.localizedDescription)
     }
+    #endif
   }
 
   private func setupBuffer() {
-
+    #if !(SIMULATOR)
+      
     let vertices = [
       // Bottom left
       Vertex(postition: [ -1, -1, 0, 1]),
@@ -57,5 +66,6 @@ extension MetalView {
     vertexBuffer = device.makeBuffer(bytes: vertices,
                                      length: MemoryLayout<Vertex>.size * vertices.count,
                                      options: [])
+    #endif
   }
 }
