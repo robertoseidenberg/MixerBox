@@ -1,6 +1,6 @@
 ### MixerBox
 
-An iOS μ-framework featuring 2 HSB color picker views.
+An iOS μ-framework featuring 2 HSB color pickers.
 
 ![ ](preview.gif)
 
@@ -12,6 +12,12 @@ Cloning the project, dropping it into your workspace and linking to __MixerBox.f
 
 ```
 $ git clone https://github.com/robertoseidenberg/MixerBox
+```
+
+To install via [Carthage](https://github.com/Carthage/Carthage) add the following line to your Cartfile:
+
+```
+github "https://github.com/robertoseidenberg/MixerBox" "v0.1"
 ```
 
 #### Usage
