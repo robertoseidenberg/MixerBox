@@ -45,8 +45,8 @@ public protocol ColorPickerViewDelegate {
 __HSBView__ as well as __SBView__ can be configured by setting each view's HSB value. They update accordingly.
 
 ```
-public var hsb: HSB {
-...
+public func setHSB(_ hsb: HSB, animated: Bool) {
+  ...
 }
 ```
 

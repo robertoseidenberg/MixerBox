@@ -172,7 +172,7 @@
 			children = (
 				A4439A0D1EB67156003C4977 /* HSBView */,
 				A4821BD51EBA7F3D00EF22F2 /* SBView */,
-				A4821BD81EBA7F7400EF22F2 /* PickerBaseView */,
+				A4821BD81EBA7F7400EF22F2 /* ColorPickerView */,
 				A4439A0E1EB67160003C4977 /* MetalView */,
 			);
 			name = Views;
@@ -262,7 +262,7 @@
 			name = SBView;
 			sourceTree = "<group>";
 		};
-		A4821BD81EBA7F7400EF22F2 /* PickerBaseView */ = {
+		A4821BD81EBA7F7400EF22F2 /* ColorPickerView */ = {
 			isa = PBXGroup;
 			children = (
 				A4821BD91EBA7F9600EF22F2 /* ColorPickerView.swift */,
@@ -271,7 +271,7 @@
 				A4439A1A1EB6790C003C4977 /* KnobContainerView */,
 				A4439A171EB67468003C4977 /* RoundedCornerView */,
 			);
-			name = PickerBaseView;
+			name = ColorPickerView;
 			sourceTree = "<group>";
 		};
 		A4821BE11EBA866E00EF22F2 /* SBMetalView */ = {

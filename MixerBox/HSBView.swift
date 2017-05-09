@@ -3,14 +3,6 @@ import UIKit
 // Displays all hues in a colorwheel manner and allows picking hue and saturation
 public final class HSBView: ColorPickerView {
   
-  public override var hsb: HSB {
-    didSet {
-      knobContainer.moveKnobTo(position: position(forHSB: hsb))
-      background.brightness = Float(hsb.brightness)
-      background.redraw()
-    }
-  }
-  
   var background: HSBMetalView!
 
   public required init?(coder aDecoder: NSCoder) {
@@ -21,6 +13,17 @@ public final class HSBView: ColorPickerView {
   public override init(frame: CGRect) {
     super.init(frame: frame)
     setup()
+  }
+  
+  public func hsb() -> HSB {
+    return hsb
+  }
+  
+  public func setHSB(_ hsb: HSB, animated: Bool) {
+    self.hsb = hsb
+    knobContainer.moveKnobTo(position: position(forHSB: hsb), animated: animated)
+    background.brightness = Float(hsb.brightness)
+    background.redraw()
   }
   
   func brightness() -> Float {
