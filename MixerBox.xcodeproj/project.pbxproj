@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41313D81EC4DB12001B986C /* ColorPickerView+Getters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41313D71EC4DB12001B986C /* ColorPickerView+Getters.swift */; };
 		A41D4EA91EB8E42400809A48 /* MetalView+Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D4EA81EB8E42400809A48 /* MetalView+Template.swift */; };
 		A435DAF31EB79716001C7D72 /* HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435DAF21EB79716001C7D72 /* HSB.swift */; };
 		A435DAF61EB7981B001C7D72 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435DAF51EB7981B001C7D72 /* RGB.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A41313D71EC4DB12001B986C /* ColorPickerView+Getters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorPickerView+Getters.swift"; sourceTree = "<group>"; };
 		A41D4EA81EB8E42400809A48 /* MetalView+Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetalView+Template.swift"; sourceTree = "<group>"; };
 		A435DAF21EB79716001C7D72 /* HSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSB.swift; sourceTree = "<group>"; };
 		A435DAF51EB7981B001C7D72 /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				A4821BD91EBA7F9600EF22F2 /* ColorPickerView.swift */,
+				A41313D71EC4DB12001B986C /* ColorPickerView+Getters.swift */,
 				A4CB80301EB79BA20064A537 /* ColorPickerView+Template.swift */,
 				A4B728DF1EB79A7700E5EA70 /* ColorPickerViewDelegate.swift */,
 				A4439A1A1EB6790C003C4977 /* KnobContainerView */,
@@ -421,6 +424,7 @@
 				A47FD4591EB923470093CFCC /* AnimationlessLayer.swift in Sources */,
 				A4439A191EB67471003C4977 /* RoundedCornerView.swift in Sources */,
 				A41D4EA91EB8E42400809A48 /* MetalView+Template.swift in Sources */,
+				A41313D81EC4DB12001B986C /* ColorPickerView+Getters.swift in Sources */,
 				A4439A151EB67232003C4977 /* Vertex.metal in Sources */,
 				A4439A031EB6714B003C4977 /* HSBView.swift in Sources */,
 				A480EEAA1EB9147E00B0AC03 /* CGPoint+Utility.swift in Sources */,

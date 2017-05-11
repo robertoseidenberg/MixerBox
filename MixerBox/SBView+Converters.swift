@@ -11,7 +11,7 @@ extension SBView {
   
   func position(forHSB hsb: HSB) -> CGPoint {
     
-    let x = bounds.size.width * CGFloat(hsb.saturation)
+    let x = bounds.size.width  * CGFloat(hsb.saturation)
     let y = bounds.size.height * CGFloat(1 - hsb.brightness)
     
     return CGPoint(x: x, y: y)

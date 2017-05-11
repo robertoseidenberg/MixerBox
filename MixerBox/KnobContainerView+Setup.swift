@@ -20,6 +20,7 @@ extension KnobContainerView {
     addSubview(knob)
     knob.autoLayoutFixedWidth(knobSize)
     knob.autoLayoutFixedHeight(knobSize)
-    knob.autoLayoutCenterInSuperview()
+    knob.autoLayoutBindTopToSuperviewTop()
+    knob.autoLayoutBindTopToSuperviewLeft()
   }
 }

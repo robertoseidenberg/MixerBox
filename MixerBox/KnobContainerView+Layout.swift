@@ -2,11 +2,16 @@ extension KnobContainerView {
 
   func moveKnobTo(position: CGPoint, animated: Bool) {
     
-    let min    = CGPoint.zero
-    let max    = CGPoint(x: self.bounds.width, y: self.bounds.height)
+    let hWidth  = knob.bounds.width / 2
+    let hHeight = knob.bounds.height / 2
+    
+    let min = CGPoint(x: -hWidth, y: -hHeight)
+    let max = CGPoint(x: self.bounds.width - hWidth, y: self.bounds.height - hHeight)
+    
     let center = position.clamp(min: min, max: max)
+    
     let change = {
-      self.knob.center = center
+      self.knob.transform = CGAffineTransform(translationX: center.x, y: center.y)
       self.knob.updateSublayers()
     }
     
