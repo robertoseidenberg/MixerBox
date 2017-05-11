@@ -13,9 +13,10 @@ extension KnobContainerView {
     knob = RoundedCornerView(frame: CGRect.zero)
     knob.translatesAutoresizingMaskIntoConstraints = false
 
-    knob.backgroundColor = knobColor
-    knob.borderColor = knobBorderColor
-    knob.borderWidth = knobBorderWidth
+    knob.backgroundColor  = knobColor
+    knob.innerborderColor = knobInnerBorderColor
+    knob.outerborderColor = knobOuterBorderColor
+    knob.borderWidth      = knobBorderWidth
 
     addSubview(knob)
     knob.autoLayoutFixedWidth(knobSize)

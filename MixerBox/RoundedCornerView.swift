@@ -2,11 +2,18 @@ import UIKit
 
 class RoundedCornerView: UIView {
 
-  var borderWidth: CGFloat = 0 { didSet { borderLayer.borderWidth = borderWidth }}
+  var borderWidth: CGFloat = 0 {
+    didSet {
+      innerBorderLayer.borderWidth = borderWidth
+      outerBorderLayer.borderWidth = borderWidth
+    }
+  }
 
-  var borderColor: UIColor = UIColor.clear { didSet { borderLayer.borderColor = borderColor.cgColor }}
+  var innerborderColor: UIColor = UIColor.clear { didSet { innerBorderLayer.borderColor = innerborderColor.cgColor }}
+  var outerborderColor: UIColor = UIColor.clear { didSet { outerBorderLayer.borderColor = outerborderColor.cgColor }}
 
-  var borderLayer: AnimationlessLayer!
+  var innerBorderLayer: AnimationlessLayer!
+  var outerBorderLayer: AnimationlessLayer!
 
   public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -21,21 +28,27 @@ class RoundedCornerView: UIView {
   override func layoutSubviews() {
     super.layoutSubviews()
 
-    borderLayer.masksToBounds = true
-    borderLayer.masksToBounds = true
-    borderLayer.allowsEdgeAntialiasing = true
-    borderLayer.cornerRadius = min(bounds.size.width, bounds.size.height) / 6
+    for layer in [innerBorderLayer, outerBorderLayer] {
+      layer!.masksToBounds = true
+      layer!.masksToBounds = true
+      layer!.allowsEdgeAntialiasing = true
+    }
+    
+    innerBorderLayer.cornerRadius = min(bounds.size.width - borderWidth, bounds.size.height - borderWidth) / 6
+    outerBorderLayer.cornerRadius = min(bounds.size.width, bounds.size.height) / 6
   }
 
-  override var bounds: CGRect { didSet { borderLayer.frame = bounds }}
+  override var bounds: CGRect { didSet { outerBorderLayer.frame = bounds }}
 
   func setup() {
     setupSublayers()
   }
 
   func setupSublayers() {
-    borderLayer = AnimationlessLayer()
-    layer.addSublayer(borderLayer)
+    innerBorderLayer = AnimationlessLayer()
+    outerBorderLayer = AnimationlessLayer()
+    layer.addSublayer(innerBorderLayer)
+    layer.addSublayer(outerBorderLayer)
   }
 
   func updateSublayers() {
@@ -47,10 +60,12 @@ class RoundedCornerView: UIView {
       let ry         = overlap.height / bounds.height
       let x: CGFloat = frame.origin.x > 0 ? 1.5 - rx : -0.5 + rx
       let y: CGFloat = frame.origin.y > 0 ? 1.5 - ry : -0.5 + ry
-      borderLayer.anchorPoint = CGPoint(x: x, y: y)
+      outerBorderLayer.anchorPoint = CGPoint(x: x, y: y)
       
       let size = CGSize(width: overlap.size.width, height: overlap.size.height)
-      borderLayer.bounds.size = size
+      outerBorderLayer.bounds.size = size
+      
+      innerBorderLayer.frame = outerBorderLayer.frame.insetBy(dx: borderWidth, dy: borderWidth)
     }
   }
 }

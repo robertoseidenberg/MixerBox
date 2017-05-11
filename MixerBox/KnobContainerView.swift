@@ -2,13 +2,19 @@ class KnobContainerView: UIView {
 
   var knobSize: CGFloat = 20
 
-  var knobBorderColor: UIColor = UIColor.black.withAlphaComponent(0.5) {
+  var knobInnerBorderColor: UIColor = UIColor.black.withAlphaComponent(0.5) {
     didSet {
-      knob.borderColor = knobBorderColor
+      knob.innerborderColor = knobInnerBorderColor
+    }
+  }
+  
+  var knobOuterBorderColor: UIColor = UIColor.white.withAlphaComponent(0.5) {
+    didSet {
+      knob.outerborderColor = knobOuterBorderColor
     }
   }
 
-  var knobBorderWidth: CGFloat = 2 {
+  var knobBorderWidth: CGFloat = 1 {
     didSet {
       knob.borderWidth = knobBorderWidth
     }
