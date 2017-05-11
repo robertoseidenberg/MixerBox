@@ -1,6 +1,6 @@
 extension CGFloat {
 
-  public func clamp(min: CGFloat, max: CGFloat) -> CGFloat {
+  func clamp(min: CGFloat, max: CGFloat) -> CGFloat {
     return Swift.min(Swift.max(self, Swift.min(min, max)), Swift.max(min, max))
   }
 }

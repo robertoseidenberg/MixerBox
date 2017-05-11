@@ -7,15 +7,16 @@ public struct HSB {
   public var brightness: Float // Range: 0...1
   
   public init(hue: Float, saturation: Float, brightness: Float) {
-    self.hue = hue
-    self.saturation = saturation
-    self.brightness = brightness
+    
+    self.hue        = hue       .clamp(min: 0, max: 1)
+    self.saturation = saturation.clamp(min: 0, max: 1)
+    self.brightness = brightness.clamp(min: 0, max: 1)
   }
   
   public init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat) {
-    self.hue = Float(hue)
-    self.saturation = Float(saturation)
-    self.brightness = Float(brightness)
+    self.hue        = Float(hue)       .clamp(min: 0, max: 1)
+    self.saturation = Float(saturation).clamp(min: 0, max: 1)
+    self.brightness = Float(brightness).clamp(min: 0, max: 1)
   }
 }
 
