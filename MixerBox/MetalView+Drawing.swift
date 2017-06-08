@@ -24,7 +24,7 @@ extension MetalView {
 
         updateFragmentBytes(forEncoder: encoder)
 
-        encoder.setVertexBuffer(vertexBuffer, offset: 0, at: 1)
+        encoder.setVertexBuffer(vertexBuffer, offset: 0, index: 1)
         encoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
 
         encoder.endEncoding()
