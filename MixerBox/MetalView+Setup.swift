@@ -27,7 +27,7 @@ extension MetalView {
   private func setupPipeline(fragmentFunctionName: String) {
     #if !(SIMULATOR)
     
-    guard let path = Bundle(for: MixerBox.MetalView).path(forResource: "default", ofType: "metallib") else {
+      guard let path = Bundle(for: MixerBox.MetalView.self).path(forResource: "default", ofType: "metallib") else {
       fatalError("Resource missing: MixerBox: default.metallib")
     }
     guard let library = try? device.makeLibrary(filepath: path) else {
