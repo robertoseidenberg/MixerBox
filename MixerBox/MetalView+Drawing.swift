@@ -17,14 +17,18 @@ extension MetalView {
         descriptor.colorAttachments[0].storeAction = .store
         descriptor.colorAttachments[0].loadAction = .clear
 
-        let commandBuffer = commandQueue.makeCommandBuffer()
+        guard let commandBuffer = commandQueue.makeCommandBuffer() else {
+           fatalError("Unexpected nil value: commandBuffer")
+        }
 
-        let encoder = commandBuffer.makeRenderCommandEncoder(descriptor: descriptor)
+        guard let encoder = commandBuffer.makeRenderCommandEncoder(descriptor: descriptor) else {
+           fatalError("Unexpected nil value: encoder")
+        }
         encoder.setRenderPipelineState(pipeline)
 
         updateFragmentBytes(forEncoder: encoder)
 
-        encoder.setVertexBuffer(vertexBuffer, offset: 0, at: 1)
+        encoder.setVertexBuffer(vertexBuffer, offset: 0, index: 1)
         encoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
 
         encoder.endEncoding()

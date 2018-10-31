@@ -10,9 +10,9 @@ extension ViewController {
       let hsb = HSB(hue:        hueSlider.value / 360,
                     saturation: saturationSlider.value / 100,
                     brightness: brightnessSlider.value / 100)
-      
-      hsbMixer.hsb = hsb
-      sbMixer.hsb = hsb
+
+      hsbMixer.setHSB(hsb, animated: false)
+      sbMixer.setHSB(hsb, animated: false)
       updateHSBSliders(hsb: hsb, labelsOnly: true)
       updateRGBSliders(rgb: hsb.rgb())
     }
@@ -30,8 +30,9 @@ extension ViewController {
         hsb.hue = hueSlider.value / 360
       }
       
-      hsbMixer.hsb = hsb
-      sbMixer.hsb = hsb
+      hsbMixer.setHSB(hsb, animated: false)
+      sbMixer.setHSB (hsb, animated: false)
+      
       updateHSBSliders(hsb: hsb)
       updateRGBSliders(rgb: hsb.rgb(), labelsOnly: true)
     }

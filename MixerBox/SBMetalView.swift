@@ -10,7 +10,7 @@ class SBMetalView: MetalView {
   #if !(IOS_SIMULATOR)
   override func updateFragmentBytes(forEncoder encoder: MTLRenderCommandEncoder) {
     var u = SBUniforms(size: bounds.size, hue: hsb.hue)
-    encoder.setFragmentBytes(&u, length: MemoryLayout<SBUniforms>.size, at: 0)
+    encoder.setFragmentBytes(&u, length: MemoryLayout<SBUniforms>.size, index: 0)
   }
   #endif
 }

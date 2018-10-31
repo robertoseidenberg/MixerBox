@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A41313D81EC4DB12001B986C /* ColorPickerView+Getters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41313D71EC4DB12001B986C /* ColorPickerView+Getters.swift */; };
 		A41313DF1EC51822001B986C /* Float+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41313DE1EC51822001B986C /* Float+Utility.swift */; };
-		A41D4EA91EB8E42400809A48 /* MetalView+Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41D4EA81EB8E42400809A48 /* MetalView+Template.swift */; };
 		A435DAF31EB79716001C7D72 /* HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435DAF21EB79716001C7D72 /* HSB.swift */; };
 		A435DAF61EB7981B001C7D72 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435DAF51EB7981B001C7D72 /* RGB.swift */; };
 		A435DAF81EB798D3001C7D72 /* UIColor+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A435DAF71EB798D3001C7D72 /* UIColor+Converters.swift */; };
@@ -60,7 +59,6 @@
 /* Begin PBXFileReference section */
 		A41313D71EC4DB12001B986C /* ColorPickerView+Getters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorPickerView+Getters.swift"; sourceTree = "<group>"; };
 		A41313DE1EC51822001B986C /* Float+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Utility.swift"; sourceTree = "<group>"; };
-		A41D4EA81EB8E42400809A48 /* MetalView+Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MetalView+Template.swift"; sourceTree = "<group>"; };
 		A435DAF21EB79716001C7D72 /* HSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSB.swift; sourceTree = "<group>"; };
 		A435DAF51EB7981B001C7D72 /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
 		A435DAF71EB798D3001C7D72 /* UIColor+Converters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Converters.swift"; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				A44399FC1EB6714B003C4977 /* MetalView.swift */,
-				A41D4EA81EB8E42400809A48 /* MetalView+Template.swift */,
 				A44399FD1EB6714B003C4977 /* MetalView+Drawing.swift */,
 				A44399FE1EB6714B003C4977 /* MetalView+Setup.swift */,
 			);
@@ -346,18 +343,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = RCCBox;
 				TargetAttributes = {
 					A44399DF1EB6707A003C4977 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = GEB5JS2XFG;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					A44399E81EB6707A003C4977 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = GEB5JS2XFG;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -427,7 +425,6 @@
 				A435DAF81EB798D3001C7D72 /* UIColor+Converters.swift in Sources */,
 				A47FD4591EB923470093CFCC /* AnimationlessLayer.swift in Sources */,
 				A4439A191EB67471003C4977 /* RoundedCornerView.swift in Sources */,
-				A41D4EA91EB8E42400809A48 /* MetalView+Template.swift in Sources */,
 				A41313D81EC4DB12001B986C /* ColorPickerView+Getters.swift in Sources */,
 				A4439A151EB67232003C4977 /* Vertex.metal in Sources */,
 				A4439A031EB6714B003C4977 /* HSBView.swift in Sources */,
@@ -469,15 +466,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -509,6 +514,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -525,15 +531,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -557,6 +571,7 @@
 				"OTHER_SWIFT_FLAGS[sdk=iphonesimulator*]" = "-D SIMULATOR";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -581,7 +596,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -601,7 +617,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rccbox.MixerBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -614,7 +631,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rccbox.MixerBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -627,7 +645,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rccbox.MixerBoxTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

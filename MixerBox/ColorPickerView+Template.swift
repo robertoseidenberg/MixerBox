@@ -2,7 +2,7 @@ extension ColorPickerView {
   
   public override func updateConstraints() {
     super.updateConstraints()
-    bringSubview(toFront: knobContainer)
+    bringSubviewToFront(knobContainer)
   }
 
   public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
