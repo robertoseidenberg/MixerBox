@@ -8,10 +8,7 @@ extension ViewController {
     updateHSBSliders(hsb: view.hsb)
     updateRGBSliders(rgb: view.hsb.rgb())
     
-    if view == hsbMixer {
-      sbMixer.hsb = hsb
-    } else if view == sbMixer {
-      hsbMixer.hsb = hsb
-    }
+    if      view == hsbMixer { sbMixer.setHSB(hsb, animated: false) }
+    else if view == sbMixer  {hsbMixer.setHSB(hsb, animated: false) }
   }
 }
